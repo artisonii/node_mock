@@ -42,7 +42,7 @@ app.put("/tasks/:id", (req, res) => {
 
 app.delete("tasks/:id", (req, res) => {
   tasks = tasks.find((t) => t.id !== parseInt(req.params.id));
-  if (!task) {
+  if (!tasks) {
     res.json({ message: "task deleted succeesfully" });
   }
 });
